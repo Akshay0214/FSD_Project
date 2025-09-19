@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-layout">
+            <!-- Main Content -->
+            <div class="main-content">
+                <header class="main-header">
+                    <h1>Student Marks System</h1>
+                    <p class="subtitle">A simple interactive demo to practice JavaScript arrays: add/remove/sort/calc avg/find max.</p>
+                </header>
+
+                <div class="table-container">
+                    <table class="students-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Marks</th>
+                            </tr>
+                        </thead>
+                        <tbody id="students-tbody">
+                            <!-- Table rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-info">
+                    <p id="total-students">Total students: 5</p>
+                </div>
+
+                <div class="helper-text">
+                    <p>Use the controls on the right to interact with the student data. You can show the highest marks, calculate average, sort by marks, reset to sample data, remove the last student, or add new students.</p>
+                </div>
+
+                <!-- Results display area -->
+                <div id="results-display" class="results-display hidden">
+                    <div class="result-content">
+                        <span id="result-text"></span>
+                        <button id="close-result" class="close-btn">&times;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Controls -->
+            <div class="sidebar">
+                <div class="controls-section">
+                    <h3>Controls</h3>
+                    
+                    <div class="control-buttons">
+                        <button id="show-highest" class="btn btn--primary btn--full-width">Show Highest</button>
+                        <button id="show-average" class="btn btn--primary btn--full-width">Show Average</button>
+                        <button id="sort-marks" class="btn btn--primary btn--full-width">Sort by Marks ↓</button>
+                        <button id="reset-sample" class="btn btn--primary btn--full-width">Reset Sample</button>
+                        <button id="remove-last" class="btn btn--primary btn--full-width">Remove Last</button>
+                    </div>
+
+                    <div class="add-student-section">
+                        <h4>Add a student</h4>
+                        <form id="add-student-form" class="add-student-form">
+                            <div class="form-group">
+                                <input 
+                                    type="text" 
+                                    id="student-name" 
+                                    class="form-control" 
+                                    placeholder="Student name"
+                                    required
+                                >
+                            </div>
+                            <div class="form-group">
+                                <input 
+                                    type="number" 
+                                    id="student-marks" 
+                                    class="form-control" 
+                                    placeholder="Marks (0-100)"
+                                    min="0" 
+                                    max="100"
+                                    required
+                                >
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Add Student</button>
+                        </form>
+                    </div>
+
+                    <div class="tip-text">
+                        <p><strong>Tip:</strong> Try adding students with different marks to see how the sorting and calculations work!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
